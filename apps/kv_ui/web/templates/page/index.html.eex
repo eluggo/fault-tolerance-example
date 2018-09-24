@@ -1,0 +1,13 @@
+<div class="jumbotron">
+  <h2><%= gettext "Welcome to ElugGO" %></h2>
+  
+  <form action="/deuruim" method="post">
+    <input type="hidden" name="_csrf_token" value=<%= raw Poison.encode!(Plug.CSRFProtection.get_csrf_token()) %>>
+    <input type="submit" class="btn btn-danger" style="height: 80px; width: 300px; font-size: 3em;" value="Let it crash!">
+  </form>
+
+  <form action="/deugood" method="post">
+    <input type="hidden" name="_csrf_token" value=<%= raw Poison.encode!(Plug.CSRFProtection.get_csrf_token()) %>>  
+    <input type="submit" class="btn btn-primary" style="height: 80px; width: 300px; font-size: 3em;" value="Sucesso">
+  </form>
+</div>
